@@ -1,5 +1,11 @@
-// Hashing example; using linear probing
-// Stan Turovsky
+/*
+--------------------------------------------------------------------
+* Name:       Stan Turovsky
+* Class:      Advanced C++
+* Files:      main.cpp, Student.h
+* Purpose:    Hashing example; using linear probing
+--------------------------------------------------------------------
+*/
 
 // Preprocessor directives
 #include "Student.h"
@@ -61,7 +67,7 @@ int main()
 		hashTable[hashCode] = testData[i];
 	}
 
-	for (int i = 0; i < SIZE; i++)
+	for (int i = 1; i < SIZE; i++)
 	{
 		cout << i << ". ";
 		if (hashTable[i] != nullptr)
@@ -84,7 +90,7 @@ int main()
 
 	if (hashTable[location] != nullptr)
 	{
-		cout << "Student Found" << endl;
+		cout << "Student found!" << endl;
 		display(*hashTable[location]);
 	}
 	else
@@ -97,6 +103,5 @@ int main()
 
 	// Leave this stuff at the end.
 	cout << endl;
-	system("pause");
 	return 0;
 }
